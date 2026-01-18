@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Trustify — Know What to Trust</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Know what to trust.<br><span>Before you believe.</span></h1>
+    <p>
+      Trustify helps you critically evaluate online information using
+      transparent credibility signals — no assumptions, no manipulation.
+    </p>
+  </header>
+
+  <!-- INPUT CARD -->
+  <section class="analyze">
+    <div class="card">
+      <h2>Analyze Information</h2>
+
+      <textarea
+        id="inputText"
+        placeholder="Paste a message, news, or post here..."
+      ></textarea>
+
+      <button onclick="analyzeText()">Analyze Credibility</button>
+
+      <div id="loading" class="loading" style="display:none;">
+        Analyzing content…
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULT -->
+  <section class="result" id="result" style="display:none;">
+    <div class="result-card">
+
+      <div class="score-box">
+        <h3>Trust Score</h3>
+        <div id="scoreCircle" class="score-circle">--</div>
+        <p id="level"></p>
+      </div>
+
+      <div class="explanation">
+        <h4>Why this result?</h4>
+        <p id="explanationText"></p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>Trustify supports critical thinking — it never decides for you.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
